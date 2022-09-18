@@ -40,7 +40,7 @@ nav{
     justify-content: space-around;
 }
 .nav-item{
-    margin: 0 40px 0 0;
+    margin: 0 5px 0 0;
 }  
 .main-frame{
     background-image: url(./images/zomato-main-background.webp);
@@ -89,7 +89,7 @@ nav{
 }
 .food-cat{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 
     /* width: 100%; */
     justify-content: space-between;
@@ -121,7 +121,7 @@ nav{
 }
 .food-collection{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 1rem;
     /* justify-content: space-between; */
 }
