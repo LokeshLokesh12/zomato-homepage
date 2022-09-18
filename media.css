@@ -1,0 +1,15 @@
+@media only screen and (max-width:426px){
+    .footer{
+        display: none;
+    }
+    .para{
+        display: block;
+    }
+    .food-collection{
+        display: block;
+    }
+    .coll{
+        max-width: 80%;
+        margin: 0 0 15px 9%;
+    }
+}

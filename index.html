@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zomato</title>
+  <style type="text/css">
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/bac203052382824f8c8fcd7668417f771597997180.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/9dd3d8fd6150ab3f8106f4a073d054521597921546.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 100
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/0256637bc22e4c9e069ad868c196d29f1597997099.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/0a2cb1a22221afd4a5c4f59bde89afda1597921603.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 200
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/081152f7adf53200c7f8789005ca54ca1597997115.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/6651f01000a2e122e587bb2282cb3ea21597921594.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 300
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/c750382e5207a1a41cdcb496ef2326d51597997149.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/aead83936ff20e860667e0a18f26d7571597921574.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 400
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/b27921d5a95f787012c8e9dfbb86c2751597997132.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/1674f573eef1f8ba15be69b44aab4d401597921585.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 500
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/8e7505f4e7be967217d81781b49425bc1597997165.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/df06bf5a1ce831e889b3b07f3bab84d61597921557.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 600
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/1792d65b5545ef5781d92cf519ad47c21597997060.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/def01ba19fdf2476f0fc1904e4195e011597921623.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 700
+    }
+
+    @font-face {
+      font-family: Okra;
+      font-display: swap;
+      src: url(https://b.zmtcdn.com/web_assets/c596984d29a9ca0a7995ac6f4d9ac6461597997080.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/e791ade4b99ef84be3ac11a07f2a774c1597921614.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 800
+    }
+
+    /* @font-face {
+            font-family: 'Wasabi';
+            font-display: swap;
+            src: url('https://b.zmtcdn.com/web_assets/a99e8b7f827877c2f943491006e80b831658822634.ttf') format('truetype'), url('https://b.zmtcdn.com/web_assets/d2044bdceb07dc2b9fc869d73366ae2c1658822615.woff2') format('woff2'), url('https://b.zmtcdn.com/web_assets/43d75ebac54f70f09f0ad4deda6ba5121658825373.woff') format('woff');
+            font-style: normal;
+            unicode-range: U+0-10FFFF;
+        } */
+  </style>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./media.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/43a0dde7d3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bg-light"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./images/Logo-black.webp" alt="">
+        </a>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="padding: 0 0 0 2%; ">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Investor Relations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="main-frame">
+    <div class="container">
+      <i> <img src="./images/logo.webp" alt=""></i>
+      <h1>Discover the best-food & drinks in Chennai</h1>
+      <form action="">
+        <select name="location" id="place">
+          <option value="">--select your location--</option>
+          <option value="">Ariyalur</option>
+          <option value="">Chengalpattu</option>
+          <option value="">chennai</option>
+          <option value="">Coimbatore</option>
+          <option value="">Cuddalore</option>
+          <option value="">Dharmapuri</option>
+          <option value="">Dindigul</option>
+          <option value="">Erode</option>
+          <option value="">Kallakurichi</option>
+          <option value="">Kanchipuram</option>
+          <option value="">Nagercoil</option>
+          <option value="">Karur</option>
+          <option value="">Krishnagiri</option>
+          <option value="">Madurai</option>
+          <option value="">Mayiladuthurai</option>
+          <option value="">Nagapattinam</option>
+          <option value="">Namakkal</option>
+          <option value="">Ooty</option>
+        </select>
+        <select name="rest" id="hotels">
+          <option value="">--select your restaurants</option>
+          <option value="">no restaurants in your location</option>
+        </select>
+      </form>
+    </div>
+  </div>
+  <!-- food-container -->
+  <div class="food-container">
+    <div class="container">
+      <div class="food-cat">
+
+        <div class="order-online">
+          <div class="card" style="width:;">
+            <img src="./images/order-online.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="">
+              <h3 class="card-title">Order Online</h3>
+              <p class="card-text">Stay home and order to your doorstep</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dining">
+          <div class="card" style="width: ;">
+            <img src="./images/dining.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="">
+              <h3 class="card-title">Dining</h3>
+              <p class="card-text">View the city's favourite dining venues</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="night-life">
+          <div class="card" style="width: ;">
+            <img src="./images/night-life.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="">
+              <h3 class="card-title">Nightlife and Clubs</h3>
+              <p class="card-text">Explore the city's top nightlife outlets</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- food-collection -->
+
+      <div class="food-collection-main">
+        <div class="food-coll-tittle">
+          <h3>Collections</h3>
+          <div class="para">
+            <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Chennai, based on trends</p>
+            <a href=""> 
+              <p class="text-right">All collections in Chennai
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                </svg>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="food-collection">
+          <div class="trend-this-week coll">
+            <div class="card bg-dark text-white">
+              <img src="./images/coll-1.webp" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <a href="">
+                  <h5 class="card-title">Trend This Week</h5>
+                  <p class="card-text">
+                   30 Places
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="best-of-chennai coll">
+            <div class="card bg-dark text-white">
+              <img src="./images/coll-2.webp" class="card-img" alt="...">
+              <div class="card-img-overlay">
+               <a href="">
+                <h5 class="card-title">Best of Chennai</h5>
+                <p class="card-text">
+                 49 Places
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                  </svg>
+                </p>
+               </a>
+              </div>
+            </div>
+          </div>
+          <div class="best-bars coll">
+            <div class="card bg-dark text-white">
+              <img src="./images/coll-3.webp" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <a href="">
+                  <h5 class="card-title">Best Bars & Clubs</h5>
+                <p class="card-text">
+                 31 Places
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                  </svg>
+                </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="brilliant-biryanis coll">
+            <div class="card bg-dark text-white">
+              <img src="./images/coll-4.webp" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <a href="">
+                  <h5 class="card-title">Brilliant Biryanis</h5>
+                  <p class="card-text">
+                   24 Places
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="chennai-food">
+      <div class="container">
+        <h2>Popular localities in and around <b>Chennai</b> </h2>
+      <div class="place-grid">
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>T.Nagar</h5>
+              <p>478 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Nungambakkam</h5>
+              <p>404 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Velachery</h5>
+              <p>694 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Adyar</h5>
+              <p>294 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Anna Nagar East</h5>
+              <p>501 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Thuraipakkam</h5>
+              <p>398 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Mylapore</h5>
+              <p>235 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main">
+          <a href="">
+            <div class="left">
+              <h5>Alwarpet</h5>
+              <p>194 places</p>
+            </div>
+            <div class="right"> > </div>
+          </a>
+        </div>
+        <div class="Places-main see-more">
+          <a href="">
+            <div class="left">
+              <h5>see more...</h5>
+              <!-- <p>478 places</p> -->
+            </div>
+            <!-- <div class="right"> > </div> -->
+          </a>
+        </div>
+        
+      </div>
+        
+      </div>
+    </div>
+
+    <div class="Explore">
+      <div class="container">
+        <h3>Explore options near me</h3>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                Popular cuisines near me
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+                <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Popular restaurant types near me
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+                <!-- <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Top Restaurant Chains
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+                <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Cities We Deliver To
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+                <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="upper-section">
+          <img src="./images/Logo-black.webp" alt="">
+        </div>
+        <div class="lower-section">
+          <div class="left">
+            <ul>
+              <h5>About zomato</h5>
+              <li><a href="">Who we are</a></li>
+              <li><a href="">blog</a></li>
+              <li><a href="">work with us</a></li>
+              <li><a href="">investor relation</a></li>
+              <li><a href="">report fraud</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+
+            <ul>
+              <h5>ZOMAVERSE</h5>
+              <li><a href="">Zomato</a></li>
+              <li><a href="">feeding india</a></li>
+              <li><a href="">hyperpure</a></li>
+              <li><a href="">zomaland</a></li>
+            </ul>
+
+            <ul>
+              <h5>FOR RESTAURANTS</h5>
+              <li><a href="">Partner with us</a></li>
+              <li><a href="">Apps for you</a></li>
+              <h5 class="work">FOR ENTERPRISES</h5>
+              <li><a href="">zomato for work</a></li>
+            </ul>
+
+            <ul>
+              <h5>LEARN MORE</h5>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">security</a></li>
+              <li><a href="">terms</a></li>
+              <li><a href="">sitemap</a></li>
+
+            </ul>
+          </div>
+          <div class="right">
+            <div class="social">
+              <h5>social links</h5>
+              <div class="icons">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+              <div class="app">
+                <img src="./images/play-store.png" alt="">
+                <img src="./images/app-store.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+</body>
+
+</html>
